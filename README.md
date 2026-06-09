@@ -1,5 +1,5 @@
 Health Sense 360
-Overview
+
 
 Health Sense 360 is an AI-powered Chronic Disease Risk Prediction and Wellness Recommendation System built using Streamlit and Machine Learning.
 
@@ -12,7 +12,8 @@ Exercise Recommendations
 Health Analytics Dashboard
 Prediction History Tracking
 CSV Report Download
-Technologies Used
+
+Technologies Used:
 Python
 Streamlit
 Scikit-Learn
