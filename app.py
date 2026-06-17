@@ -18,7 +18,7 @@ st.set_page_config(
     layout="wide"
 )
 # ======================================================
-# 🏥 HEALTH SENSE 360 PRO - UI STYLING MODULE
+# 🏥 HEALTH SENSE 360  - UI STYLING MODULE
 # Purpose: Converts Streamlit default UI into a
 #          professional medical SaaS dashboard look
 # ======================================================
@@ -222,7 +222,7 @@ if not os.path.exists(REPORT_FILE):
     ]).to_csv(REPORT_FILE, index=False)
 
 # ======================================================
-# 🏥 PROFESSIONAL SIDEBAR (UPGRADED)
+# 🏥 PROFESSIONAL SIDEBAR
 # ======================================================
 
 with st.sidebar:
@@ -328,7 +328,7 @@ st.markdown("### Advanced Clinical AI Decision Support System")
 st.markdown("---")
 
 # ======================================================
-# 📊 TAB 1 - PATIENT OVERVIEW (UPGRADED)
+# 📊 TAB 1 - PATIENT OVERVIEW 
 # ======================================================
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     "📊 Overview",
@@ -372,7 +372,7 @@ with tab1:
     risk_score = min(risk_score, 100)
 
     # ======================================================
-    # 🏥 PROFESSIONAL RISK CLASSIFICATION (UPGRADED)
+    # 🏥 PROFESSIONAL RISK CLASSIFICATION 
     # ======================================================
     if risk_score <= 20:
         risk_label = "🟢 Physiologically Stable Profile"
@@ -425,7 +425,6 @@ with tab1:
 
     with colB:
 
-        # FIXED: graph_objects instead of px (avoids your crash)
         import plotly.graph_objects as go
 
         fig = go.Figure(data=[
@@ -449,7 +448,7 @@ with tab1:
     st.markdown("---")
 
     # ======================================================
-    # 📊 ADVANCED VITAL VISUALIZATION (FIXED VERSION)
+    # 📊 ADVANCED VITAL VISUALIZATION 
     # ======================================================
     col1, col2 = st.columns(2)
 
@@ -513,7 +512,7 @@ with tab1:
     st.markdown("---")
 
     # ======================================================
-    # 🧠 CLINICAL INSIGHT SUMMARY PANEL (UPGRADED)
+    # 🧠 CLINICAL INSIGHT SUMMARY PANEL 
     # ======================================================
     st.markdown("### 🧠 Clinical Insight Summary")
 
@@ -534,7 +533,7 @@ with tab1:
     for title, msg in insights:
         st.info(f"🔹 {title}: {msg}")
 # ======================================================
-# 🧠 TAB 2 - AI DIAGNOSIS (UPGRADED)
+# 🧠 TAB 2 - AI DIAGNOSIS 
 # ======================================================
 with tab2:
 
@@ -695,7 +694,7 @@ with tab2:
         st.plotly_chart(fig2, use_container_width=True)
 
         # ======================================================
-        # 💾 SAVE TO HISTORY (IMPORTANT FIX)
+        # 💾 SAVE TO HISTORY 
         # ======================================================
         st.session_state.history.append({
             "Date": datetime.now(),
@@ -709,7 +708,7 @@ with tab2:
         })
 
 # ======================================================
-# 📈 TAB 3 - ANALYTICS (UPGRADED)
+# 📈 TAB 3 - ANALYTICS 
 # ======================================================
 with tab3:
 
@@ -738,7 +737,7 @@ with tab3:
 
     st.success(f"Random Forest Accuracy: {accuracy:.2%}")
 # ======================================================
-# 📜 TAB 4 - REPORT (UPGRADED)
+# 📜 TAB 4 - REPORT 
 # ======================================================
 with tab4:
 
@@ -801,7 +800,7 @@ with tab4:
         st.info("No clinical records available yet.")
 
 # ======================================================
-# 🍽 TAB 5 - LIFESTYLE (UPGRADED)
+# 🍽 TAB 5 - LIFESTYLE 
 # ======================================================
 with tab5:
 
@@ -893,7 +892,7 @@ with tab5:
         st.plotly_chart(fig2, use_container_width=True)
 
 # ======================================================
-# ⚙ TAB 6 - SYSTEM INFO (UPGRADED)
+# ⚙ TAB 6 - SYSTEM INFO 
 # ======================================================
 with tab6:
 
